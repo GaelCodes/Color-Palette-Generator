@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="author" content="Abigael Heredia Feliz">
+    <title>Color palette generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="assets/logo.svg" alt="logo.svg">
+        <h1>
+            Color palette generator
+        </h1>
+    </header>
+
+    <main>
+        <!-- Colors selector -->
+        <section class="palette-creator">
+            <!-- Buttons -->
+            <div class="palette-buttons">
+                <button id="PaletteColor1" class="palette-button"></button>
+                <button id="PaletteColor2" class="palette-button"></button>
+                <button id="PaletteColor3" class="palette-button selected"></button>
+                <button id="PaletteColor4" class="palette-button"></button>
+                <button id="PaletteColor5" class="palette-button"></button>
+            </div>
+            <!-- LibraryX -->
+            <div>
+                <div id="PreviewColorScreen" class="preview-color">
+                </div>
+                <div>
+                    <label for="R">R</label>
+                    <input id="PaletteR" name="R" type="number" max="255" min="0" value="0">
+
+                    <label for="G">G</label>
+                    <input id="PaletteG" name="G" type="number" max="255" min="0" value="255">
+
+                    <label for="B">B</label>
+                    <input id="PaletteB" name="B" type="number" max="255" min="0" value="255">
+                </div>
+            </div>
+
+            <!-- Name input -->
+            <div class="form">
+                <label for="name">Name</label>
+                <div>
+                    <input id="name" type="text">
+                    <button id="addPaletteBtn">+</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Saved pallettes -->
+        <section class="saved-pallettes">
+            <h2>
+                Saved palletes
+            </h2>
+            <!-- Saved palettes list -->
+            <ul id="SavedPalettesContainer">
+                <!-- Prototype -->
+                <li id="SavedPalettePrototype" class="saved-pallette">
+                    <div class="palette-header">
+                        <p class="paletteName">Name</p>
+                        <button class="deleteBtn"><img src="assets/icons/trash.svg" alt="trash"></button>
+                    </div>
+                    <div class="palette-buttons">
+                        <button disabled class="palette-button palette-color1"></button>
+                        <button disabled class="palette-button palette-color2"></button>
+                        <button disabled class="palette-button palette-color3"></button>
+                        <button disabled class="palette-button palette-color4"></button>
+                        <button disabled class="palette-button palette-color5"></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
