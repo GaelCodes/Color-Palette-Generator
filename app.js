@@ -1,4 +1,4 @@
-// TODO: Crear color palette generator
+// Crear color palette generator
 class ColorPaletteGenerator {
 
 
@@ -108,6 +108,9 @@ class ColorPaletteGenerator {
         };
 
         let palettes = JSON.parse(localStorage.getItem('palettes'));
+        if (!palettes) {
+            palettes = [];
+        }
         palettes.push(Palette);
 
         localStorage.setItem('palettes', JSON.stringify(palettes));
@@ -122,10 +125,13 @@ class ColorPaletteGenerator {
 
     static RenderSavedPalettes() {
         // Get from localStorage
-        const palettes = JSON.parse(localStorage.getItem('palettes'));
+        let palettes = JSON.parse(localStorage.getItem('palettes'));
+        if (!palettes) {
+            palettes = [];
+        }
 
 
-        // TODO: Add to DOM
+        // Add to DOM
         for (let i = 0; i < palettes.length; i++) {
             const paletteData = palettes[i];
 
@@ -211,10 +217,6 @@ class SavedPaletteController {
     }
 }
 
-
-
-
-// TODO: Crear color palette generator service
 
 window.addEventListener('load', () => {
 

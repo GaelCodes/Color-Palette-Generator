@@ -109,6 +109,7 @@ div.form input {
 }
 
 div.form button {
+    font-size: 3em;
     width: 25%;
     border-radius: 0.25em;
 }
@@ -125,6 +126,10 @@ section.saved-pallettes ul {
 
 section.saved-pallettes .saved-pallette {
     cursor: pointer;
+}
+
+section.saved-pallettes #SavedPalettePrototype {
+    display: none;
 }
 
 section.saved-pallettes .palette-header {
