@@ -174,7 +174,12 @@ section.saved-pallettes .palette-buttons {
 
 @media screen and (min-width: 992px) {
     section.palette-creator .palette-button {
-        height: 10em;
+        width: 72px;
+        height: 72px;
+    }
+    section.palette-creator .palette-buttons .selected {
+        width: 88px;
+        height: 88px;
     }
     .saved-pallettes ul {
         display: flex;
@@ -185,7 +190,8 @@ section.saved-pallettes .palette-buttons {
         width: calc(90%/3);
     }
     .saved-pallettes .palette-button {
-        height: 4em;
+        width: 42px;
+        height: 42px;
     }
 }
 
